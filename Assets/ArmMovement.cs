@@ -30,6 +30,10 @@ public class ArmMovement : MonoBehaviour
 
     int thisPosR = 0;
     int thisPosL = 0;
+
+    int randomOnHitR = 0;
+    int randomOnHitL = 0;
+
     void Start()
     {
         timer = Random.Range(4,9);
@@ -578,6 +582,8 @@ public class ArmMovement : MonoBehaviour
 
             }
         }
+
+
         else if (ButtonHandler.ArmMove == 1)
         {
             
@@ -585,19 +591,77 @@ public class ArmMovement : MonoBehaviour
             //Right Arm Movement Controlled From PC
             if (ButtonHandler.RUp == 1 && transform.tag == "EnR" && right != 2)
             {
-                Debug.Log("Tou aqui moh kota");
+                //Debug.Log("Tou aqui moh kota");
+
                 ResetPos();
                 right = 2;
                 position.y += 0.25f;
                 position.x -= 0.2f;
                 transform.position = position;
+                if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    audio.pitch = 1.8f;
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        StartCoroutine(SequentialSoundR());
+
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(sonar);
+                    }
+                }
+                else if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 1 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    audio.pitch = 1f;
+
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        audio.pitch = 1f;
+                        StartCoroutine(SequentialSpeechR(UpL));
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(UpL);
+                    }
+                }
+                else if (ButtonHandler.periodic == 1 && ButtonHandler.Speech == 0 || ButtonHandler.periodic == 2 && ButtonHandler.Speech == 0)
+                {
+                    audio.pitch = 1.8f;
+                }
             }
+
             else if(ButtonHandler.RDown == 1 && transform.tag == "EnR" && right != 1)
             {
                 ResetPos();
+                audio.pitch = 1f;
                 right = 1;
                 position.x -= 0.2f;
                 transform.position = position;
+                if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        StartCoroutine(SequentialSoundR());
+
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(sonar);
+                    }
+                }
+                else if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 1 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        audio.pitch = 1f;
+                        StartCoroutine(SequentialSpeechR(DownL));
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(DownL);
+                    }
+                }
             }
             else if(ButtonHandler.RCenterUp == 1 && transform.tag == "EnR" && right != 0)
             {
@@ -605,11 +669,66 @@ public class ArmMovement : MonoBehaviour
                 right = 0;
                 position.y += 0.25f;
                 transform.position = position;
+                if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    audio.pitch = 1.8f;
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        StartCoroutine(SequentialSoundR());
+
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(sonar);
+                    }
+                }
+                else if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 1 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    audio.pitch = 1f;
+
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        audio.pitch = 1f;
+                        StartCoroutine(SequentialSpeechR(UpF));
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(UpF);
+                    }
+                }
+                else if (ButtonHandler.periodic == 1 && ButtonHandler.Speech == 0 || ButtonHandler.periodic == 2 && ButtonHandler.Speech == 0)
+                {
+                    audio.pitch = 1.8f;
+                }
             }
             else if(ButtonHandler.RCenterDown == 1 && transform.tag == "EnR" && right != 3)
             {
                 ResetPos();
+                audio.pitch = 1f;
                 right = 3;
+                if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        StartCoroutine(SequentialSoundR());
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(sonar);
+                    }
+                }
+                else if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 1 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        audio.pitch = 1f;
+                        StartCoroutine(SequentialSpeechR(DownF));
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(DownF);
+                    }
+                }
             }
 
             //Left Arm Movement Controlled From PC
@@ -620,13 +739,70 @@ public class ArmMovement : MonoBehaviour
                 position.y += 0.25f;
                 position.x += 0.2f;
                 transform.position = position;
+                if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    audio.pitch = 1.8f;
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        StartCoroutine(SequentialSoundL());
+
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(sonar);
+                    }
+                }
+                else if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 1 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    audio.pitch = 1f;
+
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        audio.pitch = 1f;
+                        StartCoroutine(SequentialSpeechL(UpR));
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(UpR);
+                    }
+                }
+                else if (ButtonHandler.periodic == 1 && ButtonHandler.Speech == 0 || ButtonHandler.periodic == 2 && ButtonHandler.Speech == 0)
+                {
+                    audio.pitch = 1.8f;
+                }
             }
+
             else if (ButtonHandler.LDown == 1 && transform.tag == "EnL" && left != 1)
             {
                 ResetPos();
+                audio.pitch = 1f;
                 left = 1;
                 position.x += 0.2f;
                 transform.position = position;
+                if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        StartCoroutine(SequentialSoundL());
+
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(sonar);
+                    }
+                }
+                else if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 1 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        audio.pitch = 1f;
+                        StartCoroutine(SequentialSpeechL(DownR));
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(DownR);
+                    }
+                }
             }
             else if (ButtonHandler.LCenterUp == 1 && transform.tag == "EnL" && left != 0)
             {
@@ -634,11 +810,67 @@ public class ArmMovement : MonoBehaviour
                 left = 0;
                 position.y += 0.25f;
                 transform.position = position;
+                if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    audio.pitch = 1.8f;
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        StartCoroutine(SequentialSoundL());
+
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(sonar);
+                    }
+                }
+                else if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 1 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    audio.pitch = 1f;
+
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        audio.pitch = 1f;
+                        StartCoroutine(SequentialSpeechL(UpF));
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(UpF);
+                    }
+                }
+                else if (ButtonHandler.periodic == 1 && ButtonHandler.Speech == 0 || ButtonHandler.periodic == 2 && ButtonHandler.Speech == 0)
+                {
+                    audio.pitch = 1.8f;
+                }
             }
             else if (ButtonHandler.LCenterDown == 1 && transform.tag == "EnL" && left != 3)
             {
                 ResetPos();
+                audio.pitch = 1f;
                 left = 3;
+                if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        StartCoroutine(SequentialSoundL());
+
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(sonar);
+                    }
+                }
+                else if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 1 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
+                {
+                    if (ButtonHandler.sequential == 0)
+                    {
+                        audio.pitch = 1f;
+                        StartCoroutine(SequentialSpeechL(DownF));
+                    }
+                    else if (ButtonHandler.sequential == 1)
+                    {
+                        audio.PlayOneShot(DownF);
+                    }
+                }
             }
         }
 
@@ -940,7 +1172,79 @@ public class ArmMovement : MonoBehaviour
         audio.Stop();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (ButtonHandler.ArmMove == 2)
+        {
+            if (other.gameObject.tag == "GloveR" || other.gameObject.tag == "GloveL")
+            {
+                
+                randomOnHitR = Random.Range(0, 3);
+                if(randomOnHitR == right && randomOnHitR == 3)
+                {
+                    randomOnHitR -= 1;
+                }
+                else if(randomOnHitR == right && randomOnHitR >= 0 && randomOnHitR <3)
+                {
+                    randomOnHitR += 1;
+                }
+                
+                randomOnHitL = Random.Range(0, 3);
+                if (randomOnHitL == left && randomOnHitL == 3)
+                {
+                    randomOnHitL = 0;
+                }
+                else if (randomOnHitL == left && randomOnHitL >= 0 && randomOnHitL < 3)
+                {
+                    randomOnHitL = 3;
+                }
 
+                if (randomOnHitR == 0)
+                {
+                    ButtonHandler.RCenterUp = 1;
+                    Debug.Log("RCU");
+                }
+                else if (randomOnHitR == 1)
+                {
+                    ButtonHandler.RDown = 1;
+                    Debug.Log("RD");
+                }
+                else if (randomOnHitR == 2) 
+                {
+                    ButtonHandler.RUp = 1;
+                    Debug.Log("RU");
+                }
+                else if (randomOnHitR == 3)
+                {
+                    ButtonHandler.RCenterDown = 1;
+                    Debug.Log("RCD");
+                }
+
+
+
+                if(randomOnHitL == 0)
+                {
+                    ButtonHandler.LCenterUp = 1;
+                    Debug.Log("LCU");
+                }
+                else if (randomOnHitL == 1)
+                {
+                    ButtonHandler.LDown = 1;
+                    Debug.Log("LD");
+                }
+                else if (randomOnHitL == 2)
+                {
+                    ButtonHandler.LUp = 1;
+                    Debug.Log("LU");
+                }
+                else if (randomOnHitL == 3)
+                {
+                    ButtonHandler.LCenterDown = 1;
+                    Debug.Log("LCD");
+                }
+            }
+        }
+    }
 }
     
 

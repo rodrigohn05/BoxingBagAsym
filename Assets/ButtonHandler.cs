@@ -267,13 +267,19 @@ public class ButtonHandler : VariableDump
     {
         if (ArmMove == 1)
         {
-            ArmMove = 0;
-            ArmMoveTxt = "Random";
+            ArmMove = 2;
+            ArmMoveTxt = "OnHit";
+            
         }
-        else
+        else if(ArmMove == 0)
         {
             ArmMove = 1;
             ArmMoveTxt = "Controlled";
+        }
+        else if(ArmMove == 2) 
+        {
+            ArmMove = 0;
+            ArmMoveTxt = "Random";
         }
 
     }
