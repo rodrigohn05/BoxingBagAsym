@@ -28,6 +28,8 @@ public class ArmMovement : MonoBehaviour
     public int left = 3;
     public int right = 3;
 
+    int thisPosR = 0;
+    int thisPosL = 0;
     void Start()
     {
         timer = Random.Range(4,9);
@@ -276,7 +278,7 @@ public class ArmMovement : MonoBehaviour
                     right = 0;
                     if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                     {
-                        audio.pitch = 1.5f;
+                        audio.pitch = 1.8f;
                         if (ButtonHandler.sequential == 0)
                         {
                             StartCoroutine(SequentialSoundR());
@@ -303,7 +305,7 @@ public class ArmMovement : MonoBehaviour
                     }
                     else if (ButtonHandler.periodic == 1 && ButtonHandler.Speech == 0 || ButtonHandler.periodic == 2 && ButtonHandler.Speech == 0)
                     {
-                        audio.pitch = 1.5f;
+                        audio.pitch = 1.8f;
                     }
 
                 }
@@ -317,7 +319,7 @@ public class ArmMovement : MonoBehaviour
                     left = 0;
                     if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                     {
-                        audio.pitch = 1.5f;
+                        audio.pitch = 1.8f;
                         if (ButtonHandler.sequential == 0)
                         {
                             StartCoroutine(SequentialSoundL());
@@ -344,7 +346,7 @@ public class ArmMovement : MonoBehaviour
                     }
                     else if (ButtonHandler.periodic == 1 && ButtonHandler.Speech == 0 || ButtonHandler.periodic == 2 && ButtonHandler.Speech == 0)
                     {
-                        audio.pitch = 1.5f;
+                        audio.pitch = 1.8f;
                     }
 
                 }
@@ -430,7 +432,7 @@ public class ArmMovement : MonoBehaviour
                     right = 2;
                     if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                     {
-                        audio.pitch = 1.5f;
+                        audio.pitch = 1.8f;
                         if (ButtonHandler.sequential == 0)
                         {
                             StartCoroutine(SequentialSoundR());
@@ -457,7 +459,7 @@ public class ArmMovement : MonoBehaviour
                     }
                     else if (ButtonHandler.periodic == 1 && ButtonHandler.Speech == 0 || ButtonHandler.periodic == 2 && ButtonHandler.Speech == 0)
                     {
-                        audio.pitch = 1.5f;
+                        audio.pitch = 1.8f;
                     }
 
                 }
@@ -473,7 +475,7 @@ public class ArmMovement : MonoBehaviour
                     left = 2;
                     if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                     {
-                        audio.pitch = 1.5f;
+                        audio.pitch = 1.8f;
                         if (ButtonHandler.sequential == 0)
                         {
                             StartCoroutine(SequentialSoundL());
@@ -500,7 +502,7 @@ public class ArmMovement : MonoBehaviour
                     }
                     else if (ButtonHandler.periodic == 1 && ButtonHandler.Speech == 0 || ButtonHandler.periodic == 2 && ButtonHandler.Speech == 0)
                     {
-                        audio.pitch = 1.5f;
+                        audio.pitch = 1.8f;
                     }
 
                 }
@@ -578,12 +580,72 @@ public class ArmMovement : MonoBehaviour
         }
         else if (ButtonHandler.ArmMove == 1)
         {
+            
+            
+            //Right Arm Movement Controlled From PC
+            if (ButtonHandler.RUp == 1 && transform.tag == "EnR" && right != 2)
+            {
+                Debug.Log("Tou aqui moh kota");
+                ResetPos();
+                right = 2;
+                position.y += 0.25f;
+                position.x -= 0.2f;
+                transform.position = position;
+            }
+            else if(ButtonHandler.RDown == 1 && transform.tag == "EnR" && right != 1)
+            {
+                ResetPos();
+                right = 1;
+                position.x -= 0.2f;
+                transform.position = position;
+            }
+            else if(ButtonHandler.RCenterUp == 1 && transform.tag == "EnR" && right != 0)
+            {
+                ResetPos();
+                right = 0;
+                position.y += 0.25f;
+                transform.position = position;
+            }
+            else if(ButtonHandler.RCenterDown == 1 && transform.tag == "EnR" && right != 3)
+            {
+                ResetPos();
+                right = 3;
+            }
 
+            //Left Arm Movement Controlled From PC
+            if (ButtonHandler.LUp == 1 && transform.tag == "EnL" && left != 2)
+            {
+                ResetPos();
+                left = 2;
+                position.y += 0.25f;
+                position.x += 0.2f;
+                transform.position = position;
+            }
+            else if (ButtonHandler.LDown == 1 && transform.tag == "EnL" && left != 1)
+            {
+                ResetPos();
+                left = 1;
+                position.x += 0.2f;
+                transform.position = position;
+            }
+            else if (ButtonHandler.LCenterUp == 1 && transform.tag == "EnL" && left != 0)
+            {
+                ResetPos();
+                left = 0;
+                position.y += 0.25f;
+                transform.position = position;
+            }
+            else if (ButtonHandler.LCenterDown == 1 && transform.tag == "EnL" && left != 3)
+            {
+                ResetPos();
+                left = 3;
+            }
         }
 
 
         void ResetPos()
             {
+            Debug.Log("Bithc");
                 //Repositioning the hands before every move
                 if (right == 0)
                 {

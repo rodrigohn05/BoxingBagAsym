@@ -26,6 +26,14 @@ TagManager:
   - TextHeight
   - TextDistance
   - TextArmMove
+  - TextRUp
+  - TextRCenterUp
+  - TextRCenterDown
+  - TextRDown
+  - TextLUp
+  - TextLCenterUp
+  - TextLCenterDown
+  - TextLDown
   layers:
   - Default
   - TransparentFX

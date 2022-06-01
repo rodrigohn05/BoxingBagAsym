@@ -29,6 +29,16 @@ public class VariableDump : MonoBehaviour
 
     public int ArmMove1 = 0;
 
+    public int RUp1 = 0;
+    public int RDown1 = 0;
+    public int RCenterUp1 = 0;
+    public int RCenterDown1 = 1;
+
+    public int LUp1 = 0;
+    public int LDown1 = 0;
+    public int LCenterUp1 = 0;
+    public int LCenterDown1 = 1;
+
 
     // Update is called once per frame
     void Update()

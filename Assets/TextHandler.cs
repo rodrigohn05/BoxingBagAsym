@@ -74,5 +74,41 @@ public class TextHandler : MonoBehaviour
         {
             mytxt.text = ButtonHandler.ArmMoveTxt;
         }
+
+
+        else if (transform.tag == "TextRUp")
+        {
+            mytxt.text = ButtonHandler.RUpTxt;
+        }
+        else if (transform.tag == "TextRDown")
+        {
+            mytxt.text = ButtonHandler.RDownTxt;
+        }
+        else if (transform.tag == "TextRCenterUp")
+        {
+            mytxt.text = ButtonHandler.RCenterUpTxt;
+        }
+        else if (transform.tag == "TextRCenterDown")
+        {
+            mytxt.text = ButtonHandler.RCenterDownTxt;
+        }
+
+
+        else if (transform.tag == "TextLUp")
+        {
+            mytxt.text = ButtonHandler.LUpTxt;
+        }
+        else if (transform.tag == "TextLDown")
+        {
+            mytxt.text = ButtonHandler.LDownTxt;
+        }
+        else if (transform.tag == "TextLCenterUp")
+        {
+            mytxt.text = ButtonHandler.LCenterUpTxt;
+        }
+        else if (transform.tag == "TextLCenterDown")
+        {
+            mytxt.text = ButtonHandler.LCenterDownTxt;
+        }
     }
 }

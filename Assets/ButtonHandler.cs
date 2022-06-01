@@ -34,6 +34,16 @@ public class ButtonHandler : VariableDump
 
     public static int ArmMove;
 
+    public static int RUp;
+    public static int RDown;
+    public static int RCenterUp;
+    public static int RCenterDown;
+
+    public static int LUp;
+    public static int LDown;
+    public static int LCenterUp;
+    public static int LCenterDown;
+
     //Strings
 
     public static string checkTxt = "On";
@@ -55,6 +65,17 @@ public class ButtonHandler : VariableDump
 
     public static string ArmMoveTxt = "Random";
 
+    public static string LUpTxt = "Off";
+    public static string LDownTxt = "Off";
+    public static string LCenterUpTxt = "Off";
+    public static string LCenterDownTxt = "On";
+
+    public static string RUpTxt = "Off";
+    public static string RDownTxt = "Off";
+    public static string RCenterUpTxt = "Off";
+    public static string RCenterDownTxt = "On";
+
+
     private void Start()
     {
         check = check1;
@@ -71,6 +92,16 @@ public class ButtonHandler : VariableDump
         sequential = sequential1;
         cardinality = cardinality1;
         ArmMove = ArmMove1;
+        
+        RUp = RUp1;
+        RDown = RDown1;
+        RCenterUp = RCenterUp1;
+        RCenterDown = RCenterDown1;
+
+        LUp = LUp1;
+        LDown = LDown1;
+        LCenterUp = LCenterUp1;
+        LCenterDown = LCenterDown1;
     }
 
     public void HapticsHandler()
@@ -246,4 +277,163 @@ public class ButtonHandler : VariableDump
         }
 
     }
+
+    public void RightUp()
+    {
+        if(ArmMove == 1)
+        {
+            if(RUp == 0)
+            {
+                RUp = 1;
+                RDown = 0;
+                RCenterUp = 0;
+                RCenterDown = 0;
+
+                RUpTxt = "On";
+                RDownTxt = "Off";
+                RCenterUpTxt = "Off";
+                RCenterDownTxt = "Off";
+            }
+        }
+    }
+    public void RightDown()
+    {
+        if (ArmMove == 1)
+        {
+            if (RDown == 0)
+            {
+                RDown = 1;
+                RUp = 0;
+                RCenterUp = 0;
+                RCenterDown = 0;
+
+                RUpTxt = "Off";
+                RDownTxt = "On";
+                RCenterUpTxt = "Off";
+                RCenterDownTxt = "Off";
+            }
+        }
+    }
+
+    public void RightCenterDown()
+    {
+        if (ArmMove == 1)
+        {
+
+            if (RCenterDown == 0)
+            {
+                RCenterDown = 1;
+                RDown = 0;
+                RUp = 0;
+                RCenterUp = 0;
+
+                RUpTxt = "Off";
+                RDownTxt = "Off";
+                RCenterUpTxt = "Off";
+                RCenterDownTxt = "On";
+            }
+        }
+    }
+
+    public void RightCenterUp()
+    {
+        if (ArmMove == 1)
+        {
+
+
+            if (RCenterUp == 0)
+            {
+                RCenterUp = 1;
+                RDown = 0;
+                RCenterDown = 0;
+                RUp = 0;
+
+                RUpTxt = "Off";
+                RDownTxt = "Off";
+                RCenterUpTxt = "On";
+                RCenterDownTxt = "Off";
+            }
+        }
+    }
+
+    public void LeftUp()
+    {
+        if (ArmMove == 1)
+        {
+
+            if (LUp == 0)
+            {
+                LUp = 1;
+                LDown = 0;
+                LCenterDown = 0;
+                LCenterUp = 0;
+
+                LUpTxt = "On";
+                LDownTxt = "Off";
+                LCenterUpTxt = "Off";
+                LCenterDownTxt = "Off";
+            }
+        }
+    }
+
+    public void LeftDown()
+    {
+        if (ArmMove == 1)
+        {
+
+            if (LDown == 0)
+            {
+                LDown = 1;
+                LUp = 0;
+                LCenterDown = 0;
+                LCenterUp = 0;
+
+                LUpTxt = "Off";
+                LDownTxt = "On";
+                LCenterUpTxt = "Off";
+                LCenterDownTxt = "Off";
+            }
+        }
+    }
+
+    public void LeftCenterDown()
+    {
+        if (ArmMove == 1)
+        {
+
+
+            if (LCenterDown == 0)
+            {
+                LCenterDown = 1;
+                LDown = 0;
+                LUp = 0;
+                LCenterUp = 0;
+
+                LUpTxt = "Off";
+                LDownTxt = "Off";
+                LCenterUpTxt = "Off";
+                LCenterDownTxt = "On";
+            }
+        }
+    }
+
+    public void LeftCenterUp()
+    {
+        if (ArmMove == 1)
+        {
+            if (LCenterUp == 0)
+            {
+                LCenterUp = 1;
+                LDown = 0;
+                LCenterDown = 0;
+                LUp = 0;
+
+                LUpTxt = "Off";
+                LDownTxt = "Off";
+                LCenterUpTxt = "On";
+                LCenterDownTxt = "Off";
+            }
+        }
+    }
+
 }
