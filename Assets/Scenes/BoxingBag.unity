@@ -870,11 +870,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -1632,11 +1631,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -2080,11 +2078,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -2262,41 +2259,47 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test:
-    - test: 0
-      SoundTxt: 
-      SpeechTxt: 
-      moveTTxt: 
-      periodicTxt: 
-      seqTxt: 
-    - test: 0
-      SoundTxt: 
-      SpeechTxt: 
-      moveTTxt: 
-      periodicTxt: 
-      seqTxt: 
-    - test: 0
-      SoundTxt: 
-      SpeechTxt: 
-      moveTTxt: 
-      periodicTxt: 
-      seqTxt: 
-    - test: 0
-      SoundTxt: 
-      SpeechTxt: 
-      moveTTxt: 
-      periodicTxt: 
-      seqTxt: 
-    - test: 0
-      SoundTxt: 
-      SpeechTxt: 
-      moveTTxt: 
-      periodicTxt: 
-      seqTxt: 
+    task:
+    - test:
+      - test: 0
+        Attempts: 0
+        SoundTxt: 
+        SpeechTxt: 
+        moveTTxt: 
+        periodicTxt: 
+        seqTxt: 
+      - test: 0
+        Attempts: 0
+        SoundTxt: 
+        SpeechTxt: 
+        moveTTxt: 
+        periodicTxt: 
+        seqTxt: 
+      - test: 0
+        Attempts: 0
+        SoundTxt: 
+        SpeechTxt: 
+        moveTTxt: 
+        periodicTxt: 
+        seqTxt: 
+      - test: 0
+        Attempts: 0
+        SoundTxt: 
+        SpeechTxt: 
+        moveTTxt: 
+        periodicTxt: 
+        seqTxt: 
+      - test: 0
+        Attempts: 0
+        SoundTxt: 
+        SpeechTxt: 
+        moveTTxt: 
+        periodicTxt: 
+        seqTxt: 
+    - test: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -2605,11 +2608,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -3689,11 +3691,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -4123,11 +4124,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -4385,11 +4385,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -4568,11 +4567,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -4905,11 +4903,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -5664,11 +5661,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -6593,11 +6589,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -6943,11 +6938,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -7673,11 +7667,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -8371,11 +8364,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -8741,11 +8733,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -8924,11 +8915,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -9076,11 +9066,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -9319,11 +9308,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -9715,11 +9703,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -10857,11 +10844,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -11195,11 +11181,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -11472,11 +11457,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -12113,11 +12097,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -12202,11 +12185,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -12798,11 +12780,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -12981,11 +12962,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -13388,11 +13368,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -14562,11 +14541,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -14780,11 +14758,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -15066,11 +15043,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -15249,11 +15225,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -15680,11 +15655,10 @@ MonoBehaviour:
   gloveR: {fileID: 0}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger
@@ -16220,11 +16194,10 @@ MonoBehaviour:
   gloveR: {fileID: 415017697}
   myPlayer:
     ID: 0
-    Task: 0
-    Attempts: 0
-    test: []
+    task: []
   myTestList:
     test: 0
+    Attempts: 0
     SoundTxt: Spatial
     SpeechTxt: Sonification
     moveTTxt: onTrigger

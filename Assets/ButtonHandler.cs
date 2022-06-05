@@ -111,13 +111,16 @@ public class ButtonHandler : VariableDump
     public class Player
     {
         public int ID;
-        public int Task;
-        public int Attempts;
-        public Test[] test;
+
+        public Task[] task;
         
 
     }
-
+    [System.Serializable]
+    public class Task
+    {
+        public Test[] test;
+    }
     [System.Serializable]
     public class PlayerList
     {
@@ -127,6 +130,8 @@ public class ButtonHandler : VariableDump
     public class Test
     {
         public int test;
+        //public int Task;
+        public int Attempts;
         public string SoundTxt = ButtonHandler.SoundTxt;
         public string SpeechTxt = ButtonHandler.SpeechTxt;
         public string moveTTxt = ButtonHandler.moveTTxt;
