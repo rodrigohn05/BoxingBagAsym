@@ -329,6 +329,8 @@ RectTransform:
   - {fileID: 258239209}
   - {fileID: 39076807}
   - {fileID: 1370493015}
+  - {fileID: 247315272}
+  - {fileID: 1474628408}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -504,6 +506,8 @@ MonoBehaviour:
   beep: {fileID: 8300000, guid: 29a7fdb9861ccae4a81b934e13780d3a, type: 3}
   left: 3
   right: 3
+  AMHit: 0
+  amhit1: 0
 --- !u!82 &27037303
 AudioSource:
   m_ObjectHideFlags: 0
@@ -864,6 +868,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &83063088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1629,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &179167863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,6 +2076,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &241388677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2143,6 +2180,211 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241388674}
+  m_CullTransparentMesh: 1
+--- !u!1 &247315271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247315272}
+  - component: {fileID: 247315276}
+  - component: {fileID: 247315275}
+  - component: {fileID: 247315274}
+  - component: {fileID: 247315273}
+  m_Layer: 5
+  m_Name: JSon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &247315272
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247315271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1576044085}
+  m_Father: {fileID: 18194537}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.2, y: -109.1}
+  m_SizeDelta: {x: 58.69, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &247315273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247315271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df521bbe03d77df40bc72cfa7158f6a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  check1: 0
+  checkA1: 0
+  bagF1: 1
+  slider1: 1
+  slider21: 1
+  slider31: 1.07
+  slider41: 0.8
+  Sound1: 0
+  moveT1: 0
+  Speech1: 0
+  periodic1: 0
+  sequential1: 1
+  cardinality1: 2
+  ArmMove1: 0
+  RUp1: 0
+  RDown1: 0
+  RCenterUp1: 0
+  RCenterDown1: 1
+  LUp1: 0
+  LDown1: 0
+  LCenterUp1: 0
+  LCenterDown1: 1
+  gloveL: {fileID: 0}
+  gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player:
+    - ID: 0
+      Task: 0
+      Attempts: 0
+      SoundTxt: 
+      SpeechTxt: 
+      moveTTxt: 
+      periodicTxt: 
+      seqTxt: 
+    - ID: 1
+      Task: 0
+      Attempts: 0
+      SoundTxt: 
+      SpeechTxt: 
+      moveTTxt: 
+      periodicTxt: 
+      seqTxt: 
+    - ID: 2
+      Task: 0
+      Attempts: 0
+      SoundTxt: 
+      SpeechTxt: 
+      moveTTxt: 
+      periodicTxt: 
+      seqTxt: 
+--- !u!114 &247315274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247315271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 247315275}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 247315273}
+        m_TargetAssemblyTypeName: ButtonHandler, Assembly-CSharp
+        m_MethodName: outputJSON
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &247315275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247315271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &247315276
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247315271}
   m_CullTransparentMesh: 1
 --- !u!1 &251678914
 GameObject:
@@ -2351,6 +2593,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &271957560
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,6 +3406,7 @@ MonoBehaviour:
   bag: {fileID: 2000107802}
   LPosition: {x: 0, y: 0, z: 0}
   RPosition: {x: 0, y: 0, z: 0}
+  txt: {fileID: 1474628407}
 --- !u!82 &415017701
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3422,6 +3676,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &431460438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3844,6 +4109,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &473324037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4094,6 +4370,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &484666683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4265,6 +4552,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &488307204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4590,6 +4888,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &506775797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5337,6 +5646,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &590121907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6254,6 +6574,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &806983656
 GameObject:
   m_ObjectHideFlags: 0
@@ -6592,6 +6923,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &880533594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7310,6 +7652,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &995080831
 GameObject:
   m_ObjectHideFlags: 0
@@ -7996,6 +8349,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1122308892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8354,6 +8718,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &1191599132
 GameObject:
   m_ObjectHideFlags: 0
@@ -8525,6 +8900,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &1202571255
 GameObject:
   m_ObjectHideFlags: 0
@@ -8665,6 +9051,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &1204437873
 GameObject:
   m_ObjectHideFlags: 0
@@ -8896,6 +9293,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1213944160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9280,6 +9688,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1270786187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9595,6 +10014,7 @@ MonoBehaviour:
   bag: {fileID: 2000107802}
   LPosition: {x: 0, y: 0, z: 0}
   RPosition: {x: 0, y: 0, z: 0}
+  txt: {fileID: 1474628407}
 --- !u!82 &1307472473
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10140,6 +10560,8 @@ MonoBehaviour:
   beep: {fileID: 8300000, guid: 29a7fdb9861ccae4a81b934e13780d3a, type: 3}
   left: 3
   right: 3
+  AMHit: 0
+  amhit1: 0
 --- !u!82 &1344548768
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10407,6 +10829,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &1390648975
 GameObject:
   m_ObjectHideFlags: 0
@@ -10733,6 +11166,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1437227326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10998,6 +11442,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &1467581667
 GameObject:
   m_ObjectHideFlags: 0
@@ -11034,6 +11489,85 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1474628407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474628408}
+  - component: {fileID: 1474628411}
+  - component: {fileID: 1474628410}
+  m_Layer: 5
+  m_Name: HIT/NOHIT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1474628408
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474628407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 18194537}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 21.8, y: -176.462}
+  m_SizeDelta: {x: 160.651, y: 44.323}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1474628410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474628407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1474628411
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474628407}
+  m_CullTransparentMesh: 1
 --- !u!1 &1478827772
 GameObject:
   m_ObjectHideFlags: 0
@@ -11168,7 +11702,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.7007181, g: 0.70033824, b: 0.8113208, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -11548,6 +12082,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &1530703149
 GameObject:
   m_ObjectHideFlags: 0
@@ -11625,6 +12170,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1530703152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11811,6 +12367,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538537834}
+  m_CullTransparentMesh: 1
+--- !u!1 &1576044084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1576044085}
+  - component: {fileID: 1576044087}
+  - component: {fileID: 1576044086}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1576044085
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576044084}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 247315272}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1576044086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576044084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 15
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: JSON
+--- !u!222 &1576044087
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576044084}
   m_CullTransparentMesh: 1
 --- !u!1 &1584110998
 GameObject:
@@ -12130,6 +12765,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1605064302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12301,6 +12947,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1613003941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12696,6 +13353,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1649849794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13858,6 +14526,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1896109337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14064,6 +14743,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1912385832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14338,6 +15028,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1923311823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14509,6 +15210,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &1932372441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14928,6 +15640,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 0}
   gloveR: {fileID: 0}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!1 &2000107802
 GameObject:
   m_ObjectHideFlags: 0
@@ -15456,6 +16179,17 @@ MonoBehaviour:
   LCenterDown1: 1
   gloveL: {fileID: 1307472470}
   gloveR: {fileID: 415017697}
+  myPlayer:
+    ID: 0
+    Task: 0
+    Attempts: 0
+    SoundTxt: Spatial
+    SpeechTxt: Sonification
+    moveTTxt: onTrigger
+    periodicTxt: Discrete
+    seqTxt: Concurrent
+  myPlayerList:
+    player: []
 --- !u!114 &2064180879
 MonoBehaviour:
   m_ObjectHideFlags: 0

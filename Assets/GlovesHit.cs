@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GlovesHit : MonoBehaviour
 {
     public static int isHit1;
+    public static int amHit1;
     VibrationScript HitSpeed;
     OVRGrabbable ovrGrabbable;
     float VibTime;
@@ -13,6 +16,8 @@ public class GlovesHit : MonoBehaviour
     public GameObject bag;
     public Vector3 LPosition;
     public Vector3 RPosition;
+
+    public GameObject txt;
 
     //BagInFront checkBag;
     // Start is called before the first frame update
@@ -27,7 +32,11 @@ public class GlovesHit : MonoBehaviour
 
     private void Update()
     {
-        if(OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0)
+
+        Text mytxt = txt.GetComponent<Text>();
+        mytxt.text = "No Hit";
+
+        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0)
         {
             Debug.Log("trigger: " + OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger));
             
@@ -43,10 +52,12 @@ public class GlovesHit : MonoBehaviour
         {
             bag.GetComponent<BagInFront>().enabled = true;
         }
+
+        
     }
     void OnTriggerEnter(Collider col)
     {
-
+        Text mytxt = txt.GetComponent<Text>();
         //Haptics and audio for the Top section of the bag
         if (col.gameObject.tag == "Bag" && ButtonHandler.check == 0)
         {
@@ -76,7 +87,7 @@ public class GlovesHit : MonoBehaviour
                 StartCoroutine(Haptics(0.5f, velocityF2 + 0.3f, 0.5f, true, false));
 
             }
-
+            mytxt.text = "Hit Head";
 
         }
         //Haptics and audio for the mid section of the bag
@@ -108,7 +119,7 @@ public class GlovesHit : MonoBehaviour
                 StartCoroutine(Haptics(0.5f, velocityF2 + 0.15f, 0.4f, true, false));
 
             }
-
+            mytxt.text = "Hit Body";
 
         }
 
@@ -141,7 +152,7 @@ public class GlovesHit : MonoBehaviour
                StartCoroutine(Haptics(0.5f, velocityF2 + 0.02f, 0.4f, true, false));
 
             }
-
+            mytxt.text = "Hit Bottom";
 
         }
         //Haptics for Defensive arms
@@ -153,10 +164,12 @@ public class GlovesHit : MonoBehaviour
                 if (isHit1 == 0)
                 {
                     isHit1 = 1;
+                    amHit1 = 1;
                 }
                 else
                 {
                     isHit1 = 0;
+                    amHit1 = 0;
                 }
 
                 if (gameObject.tag == "GloveL")
@@ -176,8 +189,12 @@ public class GlovesHit : MonoBehaviour
                     Debug.Log("Acertei com a direita");
 
                 }
-
+                mytxt.text = "Hit Arms";
             }
+        }
+        else
+        {
+            mytxt.text = "No Hit";
         }
 
 

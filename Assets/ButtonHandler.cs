@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class ButtonHandler : VariableDump
 {
+
+    
     public GameObject gloveL;
     public GameObject gloveR;
 
@@ -102,6 +105,38 @@ public class ButtonHandler : VariableDump
         LDown = LDown1;
         LCenterUp = LCenterUp1;
         LCenterDown = LCenterDown1;
+    }
+
+    [System.Serializable]
+    public class Player
+    {
+        public int ID;
+        public int Task;
+        public int Attempts;
+        public string SoundTxt = ButtonHandler.SoundTxt;
+        public string SpeechTxt = ButtonHandler.SpeechTxt;
+        public string moveTTxt = ButtonHandler.moveTTxt;
+        public string periodicTxt = ButtonHandler.periodicTxt;
+        public string seqTxt = ButtonHandler.seqTxt;
+
+    }
+
+    [System.Serializable]
+    public class PlayerList
+    {
+        public Player[] player;
+    }
+
+    public Player myPlayer = new Player();
+    public PlayerList myPlayerList = new PlayerList();
+
+    public void outputJSON()
+    {
+        string strOutput = JsonUtility.ToJson(myPlayer);
+        File.WriteAllText(Application.dataPath + "/text.txt", strOutput);
+
+        string strOutput2 = JsonUtility.ToJson(myPlayerList);
+        File.WriteAllText(Application.dataPath + "/text2.txt", strOutput2);
     }
 
     public void HapticsHandler()

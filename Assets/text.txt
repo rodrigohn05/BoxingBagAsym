@@ -1,0 +1,1 @@
+{"ID":0,"Task":0,"Attempts":0,"SoundTxt":"Spatial","SpeechTxt":"Sonification","moveTTxt":"onTrigger","periodicTxt":"Discrete","seqTxt":"Concurrent"}
