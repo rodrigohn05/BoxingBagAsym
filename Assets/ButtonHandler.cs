@@ -113,11 +113,8 @@ public class ButtonHandler : VariableDump
         public int ID;
         public int Task;
         public int Attempts;
-        public string SoundTxt = ButtonHandler.SoundTxt;
-        public string SpeechTxt = ButtonHandler.SpeechTxt;
-        public string moveTTxt = ButtonHandler.moveTTxt;
-        public string periodicTxt = ButtonHandler.periodicTxt;
-        public string seqTxt = ButtonHandler.seqTxt;
+        public Test[] test;
+        
 
     }
 
@@ -126,17 +123,29 @@ public class ButtonHandler : VariableDump
     {
         public Player[] player;
     }
+    [System.Serializable]
+    public class Test
+    {
+        public int test;
+        public string SoundTxt = ButtonHandler.SoundTxt;
+        public string SpeechTxt = ButtonHandler.SpeechTxt;
+        public string moveTTxt = ButtonHandler.moveTTxt;
+        public string periodicTxt = ButtonHandler.periodicTxt;
+        public string seqTxt = ButtonHandler.seqTxt;
+    }
 
     public Player myPlayer = new Player();
-    public PlayerList myPlayerList = new PlayerList();
+    //public PlayerList myPlayerList = new PlayerList();
+    public Test myTestList = new Test();
 
     public void outputJSON()
     {
         string strOutput = JsonUtility.ToJson(myPlayer);
         File.WriteAllText(Application.dataPath + "/text.txt", strOutput);
 
-        string strOutput2 = JsonUtility.ToJson(myPlayerList);
+        string strOutput2 = JsonUtility.ToJson(myTestList);
         File.WriteAllText(Application.dataPath + "/text2.txt", strOutput2);
+        
     }
 
     public void HapticsHandler()
