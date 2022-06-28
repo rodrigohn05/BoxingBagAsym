@@ -1,0 +1,25 @@
+{
+   "Player":{
+      "ID":0,
+      "Configuration":{
+         "FeedbackMode":"Periodic",
+         "Spatialization":"Stereo",
+         "AudioSources":"Concurrent",
+         "Cardinality":"Two",
+         "SoundType":"Speech",
+         "Trigger":"OnRequest",
+         "Haptics":"On"
+      },
+      "Task":{
+         "TaskNumber":1,
+         "Test":{
+            "TestNumber":1,
+            "Attempts":{
+               "AttemptNumber":0,
+               "HittingHand":"Right",
+               "ObjectHit":"Arms"
+            }
+         }
+      }
+   }
+}

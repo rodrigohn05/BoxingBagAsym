@@ -36,11 +36,13 @@ public class GlovesHit : MonoBehaviour
         Text mytxt = txt.GetComponent<Text>();
         mytxt.text = "No Hit";
 
-        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0)
+        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0 || ButtonHandler.BagReset == 1)
         {
             Debug.Log("trigger: " + OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger));
             
             StartCoroutine(ResetBag());
+            Debug.Log("REset");
+            ButtonHandler.BagReset = 0;
         }
 
         //Use Bag Track button to stop bag following

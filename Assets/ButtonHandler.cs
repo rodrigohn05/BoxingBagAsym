@@ -16,6 +16,7 @@ public class ButtonHandler : VariableDump
     public static int checkA;
 
     public static int bagF;
+    public static int BagReset;
 
     public static float slider;
     public static float slider2;
@@ -46,6 +47,7 @@ public class ButtonHandler : VariableDump
     public static int LDown;
     public static int LCenterUp;
     public static int LCenterDown;
+
 
     //Strings
 
@@ -95,7 +97,9 @@ public class ButtonHandler : VariableDump
         sequential = sequential1;
         cardinality = cardinality1;
         ArmMove = ArmMove1;
-        
+
+        BagReset = BagReset1;
+
         RUp = RUp1;
         RDown = RDown1;
         RCenterUp = RCenterUp1;
@@ -113,7 +117,7 @@ public class ButtonHandler : VariableDump
         public int ID;
 
         public Task[] task;
-        
+
 
     }
     [System.Serializable]
@@ -122,6 +126,7 @@ public class ButtonHandler : VariableDump
         public Test[] test;
     }
     [System.Serializable]
+
     public class PlayerList
     {
         public Player[] player;
@@ -150,7 +155,7 @@ public class ButtonHandler : VariableDump
 
         string strOutput2 = JsonUtility.ToJson(myTestList);
         File.WriteAllText(Application.dataPath + "/text2.txt", strOutput2);
-        
+
     }
 
     public void HapticsHandler()
@@ -489,6 +494,21 @@ public class ButtonHandler : VariableDump
                 LCenterDownTxt = "Off";
             }
         }
+    }
+
+    public void ResetTheBag()
+    {
+        if(BagReset == 0)
+        {
+            BagReset = 1;
+        }
+        
+    }
+
+    IEnumerator waiter()
+    {
+        yield return new WaitForSeconds(0.1f);
+        
     }
 
 }

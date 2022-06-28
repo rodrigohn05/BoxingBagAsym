@@ -29,6 +29,8 @@ public class VariableDump : MonoBehaviour
 
     public int ArmMove1 = 0;
 
+    public int BagReset1 = 0;
+
     public int RUp1 = 0;
     public int RDown1 = 0;
     public int RCenterUp1 = 0;

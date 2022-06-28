@@ -37,6 +37,12 @@ public class ArmMovement : MonoBehaviour
     public int AMHit=0;
     public int amhit1=0;
 
+    public GameObject checkotherR;
+    public GameObject checkotherL;
+
+    public int impactR;
+    public int impactL;
+
     void Start()
     {
         timer = Random.Range(4,9);
@@ -457,15 +463,103 @@ public class ArmMovement : MonoBehaviour
 
         else if(ButtonHandler.ArmMove == 2)
         {
-            
+            if (transform.tag == "EnR")
+            {
+                checkotherR = GameObject.FindGameObjectWithTag("EnL");
+                impactL = checkotherR.GetComponent<ArmMovement>().amhit1;
+                if(impactL != AMHit)
+                {
+                    ResetPos();
+                    if (transform.tag == "EnR")
+                    {
+                        right = Random.Range(0, 3);
+                        Debug.Log("right: " + right);
+                    }
+                    else if (transform.tag == "EnL")
+                    {
+                        left = Random.Range(0, 3);
+                        Debug.Log("left: " + left);
+                    }
+
+                    if (right == 0 && transform.tag == "EnR")
+                    {
+                        position.y += 0.25f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+                    else if (right == 1 && transform.tag == "EnR")
+                    {
+                        audio.pitch = 1f;
+
+                        position.x -= 0.2f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+                    else if (right == 2 && transform.tag == "EnR")
+                    {
+                        position.y += 0.25f;
+                        position.x -= 0.2f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+                    else if (right == 3 && transform.tag == "EnR")
+                    {
+                        audio.pitch = 1f;
+                        MovementArms();
+                    }
+                    AMHit = amhit1;
+                }
+            }
+            else if (transform.tag == "EnL")
+            {
+                checkotherL = GameObject.FindGameObjectWithTag("EnR");
+                impactR = checkotherL.GetComponent<ArmMovement>().amhit1;
+                if (impactL != AMHit)
+                {
+                    if (left == 0 && transform.tag == "EnL")
+                    {
+                        position.y += 0.25f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+
+                    else if (left == 1 && transform.tag == "EnL")
+                    {
+                        audio.pitch = 1f;
+                        position.x += 0.2f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+                    else if (left == 2 && transform.tag == "EnL")
+                    {
+                        position.y += 0.25f;
+                        position.x += 0.2f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+                    else if (left == 3 && transform.tag == "EnL")
+                    {
+                        audio.pitch = 1f;
+                        MovementArms();
+                    }
+                    AMHit = amhit1;
+                }
+            }
+
             if (amhit1 != AMHit)
             {
                 ResetPos();
-                right = Random.Range(0, 3);
-                left = Random.Range(0, 3);
+                if (transform.tag == "EnR")
+                {
+                    right = Random.Range(0, 3);
+                    Debug.Log("right: " + right);
+                }
+                else if (transform.tag == "EnL")
+                {
+                    left = Random.Range(0, 3);
+                    Debug.Log("left: " + left);
+                }
 
-                Debug.Log("right: " + right+ " left: " + left);
-                
                 if (right == 0 && transform.tag == "EnR")
                 {
                     position.y += 0.25f;
