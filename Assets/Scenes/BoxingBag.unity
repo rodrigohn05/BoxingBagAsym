@@ -508,8 +508,15 @@ MonoBehaviour:
   beep: {fileID: 8300000, guid: 29a7fdb9861ccae4a81b934e13780d3a, type: 3}
   left: 3
   right: 3
-  AMHit: 0
+  AMHitH: 0
+  AMHitB: 0
+  AMHitR: 0
+  AMHitL: 0
   amhit1: 0
+  checkotherR: {fileID: 0}
+  checkotherL: {fileID: 0}
+  impactR: 0
+  impactL: 0
 --- !u!82 &27037303
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1176,6 +1183,7 @@ GameObject:
   - component: {fileID: 132040600}
   - component: {fileID: 132040599}
   - component: {fileID: 132040598}
+  - component: {fileID: 132040595}
   - component: {fileID: 132040597}
   - component: {fileID: 132040596}
   - component: {fileID: 132040594}
@@ -1198,6 +1206,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f4f4fd95b6cac42a28072e658caf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &132040595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132040593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 522fabb28dddd404f9a1ba897de411b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LAint: 0
+  RAint: 0
+  LeftChecker: 0
+  RightChecker: 0
 --- !u!54 &132040596
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10970,8 +10994,15 @@ MonoBehaviour:
   beep: {fileID: 8300000, guid: 29a7fdb9861ccae4a81b934e13780d3a, type: 3}
   left: 3
   right: 3
-  AMHit: 0
+  AMHitH: 0
+  AMHitB: 0
+  AMHitR: 0
+  AMHitL: 0
   amhit1: 0
+  checkotherR: {fileID: 0}
+  checkotherL: {fileID: 0}
+  impactR: 0
+  impactL: 0
 --- !u!82 &1344548768
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16410,6 +16441,7 @@ GameObject:
   - component: {fileID: 2012445136}
   - component: {fileID: 2012445142}
   - component: {fileID: 2012445141}
+  - component: {fileID: 2012445138}
   - component: {fileID: 2012445140}
   - component: {fileID: 2012445139}
   - component: {fileID: 2012445137}
@@ -16446,6 +16478,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f4f4fd95b6cac42a28072e658caf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2012445138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012445135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f51529d27b2e942963fce99795b6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LAint: 0
+  RAint: 0
+  LeftChecker: 0
+  RightChecker: 0
 --- !u!54 &2012445139
 Rigidbody:
   m_ObjectHideFlags: 0

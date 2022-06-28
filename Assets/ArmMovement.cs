@@ -34,6 +34,8 @@ public class ArmMovement : MonoBehaviour
     int randomOnHitR = 0;
     int randomOnHitL = 0;
 
+    public int AMHitH = 0;
+    public int AMHitB = 0;
     public int AMHitR=0;
     public int AMHitL = 0;
     public int amhit1=0;
@@ -611,6 +613,148 @@ public class ArmMovement : MonoBehaviour
                     }
                     AMHitL = impactL;
                 }
+
+                
+            }
+
+            if (BodyCollision.bodyCol != AMHitB)
+            {
+                ResetPos();
+                if (transform.tag == "EnR")
+                {
+                    right = Random.Range(0, 3);
+                    Debug.Log("right: " + right);
+                }
+                else if (transform.tag == "EnL")
+                {
+                    left = Random.Range(0, 3);
+                    Debug.Log("left: " + left);
+                }
+
+                if (right == 0 && transform.tag == "EnR")
+                {
+                    position.y += 0.25f;
+                    transform.position = position;
+                    MovementArms();
+                }
+                else if (right == 1 && transform.tag == "EnR")
+                {
+                    audio.pitch = 1f;
+
+                    position.x -= 0.2f;
+                    transform.position = position;
+                    MovementArms();
+                }
+                else if (right == 2 && transform.tag == "EnR")
+                {
+                    position.y += 0.25f;
+                    position.x -= 0.2f;
+                    transform.position = position;
+                    MovementArms();
+                }
+                else if (right == 3 && transform.tag == "EnR")
+                {
+                    audio.pitch = 1f;
+                    MovementArms();
+                }
+
+                if (left == 0 && transform.tag == "EnL")
+                {
+                    position.y += 0.25f;
+                    transform.position = position;
+                    MovementArms();
+                }
+
+                else if (left == 1 && transform.tag == "EnL")
+                {
+                    audio.pitch = 1f;
+                    position.x += 0.2f;
+                    transform.position = position;
+                    MovementArms();
+                }
+                else if (left == 2 && transform.tag == "EnL")
+                {
+                    position.y += 0.25f;
+                    position.x += 0.2f;
+                    transform.position = position;
+                    MovementArms();
+                }
+                else if (left == 3 && transform.tag == "EnL")
+                {
+                    audio.pitch = 1f;
+                    MovementArms();
+                }
+
+                AMHitB = BodyCollision.bodyCol;
+            }
+            if (HeadCollision.headCol != AMHitH)
+            {
+                ResetPos();
+                if (transform.tag == "EnR")
+                {
+                    right = Random.Range(0, 3);
+                    Debug.Log("right: " + right);
+                }
+                else if (transform.tag == "EnL")
+                {
+                    left = Random.Range(0, 3);
+                    Debug.Log("left: " + left);
+                }
+
+                if (right == 0 && transform.tag == "EnR")
+                {
+                    position.y += 0.25f;
+                    transform.position = position;
+                    MovementArms();
+                }
+                else if (right == 1 && transform.tag == "EnR")
+                {
+                    audio.pitch = 1f;
+
+                    position.x -= 0.2f;
+                    transform.position = position;
+                    MovementArms();
+                }
+                else if (right == 2 && transform.tag == "EnR")
+                {
+                    position.y += 0.25f;
+                    position.x -= 0.2f;
+                    transform.position = position;
+                    MovementArms();
+                }
+                else if (right == 3 && transform.tag == "EnR")
+                {
+                    audio.pitch = 1f;
+                    MovementArms();
+                }
+
+                if (left == 0 && transform.tag == "EnL")
+                {
+                    position.y += 0.25f;
+                    transform.position = position;
+                    MovementArms();
+                }
+
+                else if (left == 1 && transform.tag == "EnL")
+                {
+                    audio.pitch = 1f;
+                    position.x += 0.2f;
+                    transform.position = position;
+                    MovementArms();
+                }
+                else if (left == 2 && transform.tag == "EnL")
+                {
+                    position.y += 0.25f;
+                    position.x += 0.2f;
+                    transform.position = position;
+                    MovementArms();
+                }
+                else if (left == 3 && transform.tag == "EnL")
+                {
+                    audio.pitch = 1f;
+                    MovementArms();
+                }
+                AMHitH = HeadCollision.headCol;
             }
             /**
                         if (amhit1 != AMHit)
@@ -984,6 +1128,7 @@ public class ArmMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+
         //Debug.Log("ontrigger");
         if (ButtonHandler.ArmMove == 2)
         {
