@@ -34,7 +34,8 @@ public class ArmMovement : MonoBehaviour
     int randomOnHitR = 0;
     int randomOnHitL = 0;
 
-    public int AMHit=0;
+    public int AMHitR=0;
+    public int AMHitL = 0;
     public int amhit1=0;
 
     public GameObject checkotherR;
@@ -467,20 +468,13 @@ public class ArmMovement : MonoBehaviour
             {
                 checkotherR = GameObject.FindGameObjectWithTag("EnL");
                 impactL = checkotherR.GetComponent<ArmMovement>().amhit1;
-                if(impactL != AMHit)
+                if(impactL != AMHitL)
                 {
                     ResetPos();
-                    if (transform.tag == "EnR")
-                    {
-                        right = Random.Range(0, 3);
-                        Debug.Log("right: " + right);
-                    }
-                    else if (transform.tag == "EnL")
-                    {
-                        left = Random.Range(0, 3);
-                        Debug.Log("left: " + left);
-                    }
-
+                    right = Random.Range(0, 3);
+                    Debug.Log("right: " + right);
+                    
+                    
                     if (right == 0 && transform.tag == "EnR")
                     {
                         position.y += 0.25f;
@@ -507,15 +501,54 @@ public class ArmMovement : MonoBehaviour
                         audio.pitch = 1f;
                         MovementArms();
                     }
-                    AMHit = amhit1;
+                    AMHitL = impactL;
+                }
+                else if(impactR != AMHitR)
+                {
+                    ResetPos();
+                    right = Random.Range(0, 3);
+                    Debug.Log("right: " + right);
+                    
+                    
+                    if (right == 0 && transform.tag == "EnR")
+                    {
+                        position.y += 0.25f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+                    else if (right == 1 && transform.tag == "EnR")
+                    {
+                        audio.pitch = 1f;
+
+                        position.x -= 0.2f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+                    else if (right == 2 && transform.tag == "EnR")
+                    {
+                        position.y += 0.25f;
+                        position.x -= 0.2f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+                    else if (right == 3 && transform.tag == "EnR")
+                    {
+                        audio.pitch = 1f;
+                        MovementArms();
+                    }
+                    AMHitR = impactR;
                 }
             }
             else if (transform.tag == "EnL")
             {
                 checkotherL = GameObject.FindGameObjectWithTag("EnR");
                 impactR = checkotherL.GetComponent<ArmMovement>().amhit1;
-                if (impactL != AMHit)
+                if (impactR != AMHitR)
                 {
+                    ResetPos();
+                    left = Random.Range(0, 3);
+                    Debug.Log("left: " + left);
+                    
                     if (left == 0 && transform.tag == "EnL")
                     {
                         position.y += 0.25f;
@@ -542,83 +575,117 @@ public class ArmMovement : MonoBehaviour
                         audio.pitch = 1f;
                         MovementArms();
                     }
-                    AMHit = amhit1;
+                    AMHitR = impactR;
                 }
-            }
-
-            if (amhit1 != AMHit)
-            {
-                ResetPos();
-                if (transform.tag == "EnR")
+                else if(impactL != AMHitL)
                 {
-                    right = Random.Range(0, 3);
-                    Debug.Log("right: " + right);
-                }
-                else if (transform.tag == "EnL")
-                {
+                    ResetPos();
                     left = Random.Range(0, 3);
                     Debug.Log("left: " + left);
-                }
 
-                if (right == 0 && transform.tag == "EnR")
-                {
-                    position.y += 0.25f;
-                    transform.position = position;
-                    MovementArms();
-                }
-                else if (right == 1 && transform.tag == "EnR")
-                {
-                    audio.pitch = 1f;
+                    if (left == 0 && transform.tag == "EnL")
+                    {
+                        position.y += 0.25f;
+                        transform.position = position;
+                        MovementArms();
+                    }
 
-                    position.x -= 0.2f;
-                    transform.position = position;
-                    MovementArms();
+                    else if (left == 1 && transform.tag == "EnL")
+                    {
+                        audio.pitch = 1f;
+                        position.x += 0.2f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+                    else if (left == 2 && transform.tag == "EnL")
+                    {
+                        position.y += 0.25f;
+                        position.x += 0.2f;
+                        transform.position = position;
+                        MovementArms();
+                    }
+                    else if (left == 3 && transform.tag == "EnL")
+                    {
+                        audio.pitch = 1f;
+                        MovementArms();
+                    }
+                    AMHitL = impactL;
                 }
-                else if (right == 2 && transform.tag == "EnR")
-                {
-                    position.y += 0.25f;
-                    position.x -= 0.2f;
-                    transform.position = position;
-                    MovementArms();
-                }
-                else if (right == 3 && transform.tag == "EnR")
-                {
-                    audio.pitch = 1f;
-                    MovementArms();
-                }
-
-                if (left == 0 && transform.tag == "EnL")
-                {
-                    position.y += 0.25f;
-                    transform.position = position;
-                    MovementArms();
-                }
-
-                else if (left == 1 && transform.tag == "EnL")
-                {
-                    audio.pitch = 1f;
-                    position.x += 0.2f;
-                    transform.position = position;
-                    MovementArms();
-                }
-                else if (left == 2 && transform.tag == "EnL")
-                {
-                    position.y += 0.25f;
-                    position.x += 0.2f;
-                    transform.position = position;
-                    MovementArms();
-                }
-                else if (left == 3 && transform.tag == "EnL")
-                {
-                    audio.pitch = 1f;
-                    MovementArms();
-                }
-                AMHit = amhit1;
             }
-            
+            /**
+                        if (amhit1 != AMHit)
+                        {
+                            ResetPos();
+                            if (transform.tag == "EnR")
+                            {
+                                right = Random.Range(0, 3);
+                                Debug.Log("right: " + right);
+                            }
+                            else if (transform.tag == "EnL")
+                            {
+                                left = Random.Range(0, 3);
+                                Debug.Log("left: " + left);
+                            }
+
+                            if (right == 0 && transform.tag == "EnR")
+                            {
+                                position.y += 0.25f;
+                                transform.position = position;
+                                MovementArms();
+                            }
+                            else if (right == 1 && transform.tag == "EnR")
+                            {
+                                audio.pitch = 1f;
+
+                                position.x -= 0.2f;
+                                transform.position = position;
+                                MovementArms();
+                            }
+                            else if (right == 2 && transform.tag == "EnR")
+                            {
+                                position.y += 0.25f;
+                                position.x -= 0.2f;
+                                transform.position = position;
+                                MovementArms();
+                            }
+                            else if (right == 3 && transform.tag == "EnR")
+                            {
+                                audio.pitch = 1f;
+                                MovementArms();
+                            }
+
+                            if (left == 0 && transform.tag == "EnL")
+                            {
+                                position.y += 0.25f;
+                                transform.position = position;
+                                MovementArms();
+                            }
+
+                            else if (left == 1 && transform.tag == "EnL")
+                            {
+                                audio.pitch = 1f;
+                                position.x += 0.2f;
+                                transform.position = position;
+                                MovementArms();
+                            }
+                            else if (left == 2 && transform.tag == "EnL")
+                            {
+                                position.y += 0.25f;
+                                position.x += 0.2f;
+                                transform.position = position;
+                                MovementArms();
+                            }
+                            else if (left == 3 && transform.tag == "EnL")
+                            {
+                                audio.pitch = 1f;
+                                MovementArms();
+                            }
+                            AMHit = amhit1;
+                        }
+                        **/
         }
 
-        
+
 
         void ResetPos()
         {
@@ -917,18 +984,37 @@ public class ArmMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ontrigger");
+        //Debug.Log("ontrigger");
         if (ButtonHandler.ArmMove == 2)
         {
             if (other.gameObject.tag == "GloveR" || other.gameObject.tag == "GloveL")
             {
-                if(amhit1 == 0)
+                if (gameObject.transform.tag == "EnL")
                 {
-                    amhit1 = 1;
+                    if (amhit1 == 0)
+                    {
+                        amhit1 = 1;
+                        impactL = 1;
+                    }
+                    else if (amhit1 == 1)
+                    {
+                        amhit1 = 0;
+                        impactL = 0;
+                    }
                 }
-                else if (amhit1 == 1)
+                
+                else if (gameObject.transform.tag == "EnR")
                 {
-                    amhit1 = 0;
+                    if (amhit1 == 0)
+                    {
+                        amhit1 = 1;
+                        impactR = 1;
+                    }
+                    else if (amhit1 == 1)
+                    {
+                        amhit1 = 0;
+                        impactR = 0;
+                    }
                 }
             }
         }
