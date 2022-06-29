@@ -1130,8 +1130,7 @@ public class ArmMovement : MonoBehaviour
     {
 
         //Debug.Log("ontrigger");
-        if (ButtonHandler.ArmMove == 2)
-        {
+        
             if (other.gameObject.tag == "GloveR" || other.gameObject.tag == "GloveL")
             {
                 if (gameObject.transform.tag == "EnL")
@@ -1162,7 +1161,7 @@ public class ArmMovement : MonoBehaviour
                     }
                 }
             }
-        }
+        
     }
 
 

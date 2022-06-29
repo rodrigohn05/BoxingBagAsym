@@ -16,16 +16,18 @@ public class BodyCollision : MonoBehaviour
 
     private void Start()
     {
-        LeftArm = GameObject.FindGameObjectWithTag("EnL");
-        RightArm = GameObject.FindGameObjectWithTag("EnR");
+        
     }
     private void Update()
     {
-        LAint = GetComponent<ArmMovement>().impactL;
-        RAint = GetComponent<ArmMovement>().impactR;
+        LeftArm = GameObject.FindGameObjectWithTag("EnL");
+        RightArm = GameObject.FindGameObjectWithTag("EnR");
+        LAint = LeftArm.GetComponent<ArmMovement>().impactL;
+        RAint = RightArm.GetComponent<ArmMovement>().impactR;
 
         if (LAint != LeftChecker)
         {
+            Debug.Log("LAint != LeftChecker");
             StartCoroutine(DisableCollider());
             LeftChecker = LAint;
         }
@@ -39,6 +41,9 @@ public class BodyCollision : MonoBehaviour
     {
         if (other.transform.tag == "GloveL" || other.transform.tag == "GloveR")
         {
+            StartCoroutine(DisableColliders(LeftArm));
+            StartCoroutine(DisableColliders(RightArm));
+
             if (bodyCol == 0)
             {
                 bodyCol = 1;
@@ -52,7 +57,14 @@ public class BodyCollision : MonoBehaviour
     IEnumerator DisableCollider()
     {
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.8f);
         gameObject.GetComponent<CapsuleCollider>().enabled = true;
+    }
+
+    IEnumerator DisableColliders(GameObject arm)
+    {
+        arm.GetComponent<CapsuleCollider>().enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        arm.GetComponent<CapsuleCollider>().enabled = true;
     }
 }

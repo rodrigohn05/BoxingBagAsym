@@ -22,8 +22,8 @@ public class HeadCollision : MonoBehaviour
     {
         LeftArm = GameObject.FindGameObjectWithTag("EnL");
         RightArm = GameObject.FindGameObjectWithTag("EnR");
-        LAint = GetComponent<ArmMovement>().impactL;
-        RAint = GetComponent<ArmMovement>().impactR;
+        LAint = LeftArm.GetComponent<ArmMovement>().impactL;
+        RAint = RightArm.GetComponent<ArmMovement>().impactR;
 
         if(LAint != LeftChecker)
         {
@@ -57,7 +57,7 @@ public class HeadCollision : MonoBehaviour
     IEnumerator DisableCollider()
     {
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.8f);
         gameObject.GetComponent<CapsuleCollider>().enabled = true;
     }
 
