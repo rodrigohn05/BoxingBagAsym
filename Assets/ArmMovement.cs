@@ -143,6 +143,7 @@ public class ArmMovement : MonoBehaviour
         //Use of sonification with button trigger
         if (OVRInput.GetDown(OVRInput.Button.One) && gameObject.tag == "EnL" && ButtonHandler.moveT == 0 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
         {
+            Debug.Log("Aqui por alguma razao");
             if (ButtonHandler.sequential == 0)
             {
                 StartCoroutine(SequentialSoundL());
@@ -874,9 +875,10 @@ public class ArmMovement : MonoBehaviour
         {
             if(right == 0)
             {
+                audio.pitch = 1.8f;
                 if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                 {
-                    audio.pitch = 1.8f;
+                    
                     if (ButtonHandler.sequential == 0)
                     {
                         StartCoroutine(SequentialSoundR());
@@ -909,6 +911,7 @@ public class ArmMovement : MonoBehaviour
 
             else if(right == 1)
             {
+                audio.pitch = 1f;
                 if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                 {
                     if (ButtonHandler.sequential == 0)
@@ -937,9 +940,10 @@ public class ArmMovement : MonoBehaviour
 
             else if(right == 2)
             {
+                audio.pitch = 1.8f;
                 if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                 {
-                    audio.pitch = 1.8f;
+                    
                     if (ButtonHandler.sequential == 0)
                     {
                         StartCoroutine(SequentialSoundR());
@@ -971,6 +975,7 @@ public class ArmMovement : MonoBehaviour
             }
             else if (right == 3)
             {
+                audio.pitch = 1f;
                 if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                 {
                     if (ButtonHandler.sequential == 0)
@@ -997,9 +1002,10 @@ public class ArmMovement : MonoBehaviour
 
                 if(left == 0)
                 {
+                    audio.pitch = 1.8f;
                     if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                     {
-                        audio.pitch = 1.8f;
+                        
                         if (ButtonHandler.sequential == 0)
                         {
                             StartCoroutine(SequentialSoundL());
@@ -1032,6 +1038,7 @@ public class ArmMovement : MonoBehaviour
                 }
                 else if(left == 1)
                 {
+                    audio.pitch = 1f;
                     if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                     {
                         if (ButtonHandler.sequential == 0)
@@ -1060,9 +1067,10 @@ public class ArmMovement : MonoBehaviour
 
                 else if(left == 2)
                 {
+                    audio.pitch = 1.8f;
                     if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                     {
-                        audio.pitch = 1.8f;
+                        
                         if (ButtonHandler.sequential == 0)
                         {
                             StartCoroutine(SequentialSoundL());
@@ -1095,6 +1103,7 @@ public class ArmMovement : MonoBehaviour
 
                 else if(left == 3)
                 {
+                    audio.pitch = 1f;
                     if (ButtonHandler.moveT == 1 && ButtonHandler.Speech == 0 && ButtonHandler.checkA == 0 && ButtonHandler.periodic == 0)
                     {
                         if (ButtonHandler.sequential == 0)
