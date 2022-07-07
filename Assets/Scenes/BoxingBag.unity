@@ -499,12 +499,14 @@ MonoBehaviour:
   EnemyRight: {fileID: 1344548758}
   audio: {fileID: 0}
   sonar: {fileID: 8300000, guid: 10c5c968630c32c49bce1b55f7e0e45a, type: 3}
-  UpF: {fileID: 8300000, guid: f26434a41da204946beba8b022817502, type: 3}
-  UpL: {fileID: 8300000, guid: 5dc428601b390c146b3d128f5c659168, type: 3}
-  UpR: {fileID: 8300000, guid: 8d026d625ff652d459d235aca5570059, type: 3}
-  DownF: {fileID: 8300000, guid: 278717db5d380b541ad566fd9bcca371, type: 3}
-  DownL: {fileID: 8300000, guid: 4282601504c6476448d7b2d5806b639d, type: 3}
-  DownR: {fileID: 8300000, guid: 79c497921cdf541468fb28c25549c715, type: 3}
+  UpFR: {fileID: 8300000, guid: 14391332156aab24681a66368c2ff27e, type: 3}
+  UpFL: {fileID: 8300000, guid: d88c19e251721b14184fc0dd0b53cea4, type: 3}
+  UpL: {fileID: 8300000, guid: b18be4438b8e90145bfe92bbd20599c8, type: 3}
+  UpR: {fileID: 8300000, guid: 501c6f58fc113d34ab866864399fd341, type: 3}
+  DownFR: {fileID: 8300000, guid: ef7fe85421d9f504eb92c4e5d272bf22, type: 3}
+  DownFL: {fileID: 8300000, guid: c61260352c54ff043b6e26f6723ec243, type: 3}
+  DownL: {fileID: 8300000, guid: 020587c00b7041e4aaae7916fd1fb52e, type: 3}
+  DownR: {fileID: 8300000, guid: 75cf5b3e6615f144d9e48da68d9ca068, type: 3}
   beep: {fileID: 8300000, guid: 29a7fdb9861ccae4a81b934e13780d3a, type: 3}
   left: 3
   right: 3
@@ -10985,12 +10987,14 @@ MonoBehaviour:
   EnemyRight: {fileID: 1344548758}
   audio: {fileID: 0}
   sonar: {fileID: 8300000, guid: 10c5c968630c32c49bce1b55f7e0e45a, type: 3}
-  UpF: {fileID: 8300000, guid: f26434a41da204946beba8b022817502, type: 3}
-  UpL: {fileID: 8300000, guid: 5dc428601b390c146b3d128f5c659168, type: 3}
-  UpR: {fileID: 8300000, guid: 8d026d625ff652d459d235aca5570059, type: 3}
-  DownF: {fileID: 8300000, guid: 278717db5d380b541ad566fd9bcca371, type: 3}
-  DownL: {fileID: 8300000, guid: 4282601504c6476448d7b2d5806b639d, type: 3}
-  DownR: {fileID: 8300000, guid: 79c497921cdf541468fb28c25549c715, type: 3}
+  UpFR: {fileID: 8300000, guid: 14391332156aab24681a66368c2ff27e, type: 3}
+  UpFL: {fileID: 8300000, guid: d88c19e251721b14184fc0dd0b53cea4, type: 3}
+  UpL: {fileID: 8300000, guid: b18be4438b8e90145bfe92bbd20599c8, type: 3}
+  UpR: {fileID: 8300000, guid: 501c6f58fc113d34ab866864399fd341, type: 3}
+  DownFR: {fileID: 8300000, guid: ef7fe85421d9f504eb92c4e5d272bf22, type: 3}
+  DownFL: {fileID: 8300000, guid: c61260352c54ff043b6e26f6723ec243, type: 3}
+  DownL: {fileID: 8300000, guid: 020587c00b7041e4aaae7916fd1fb52e, type: 3}
+  DownR: {fileID: 8300000, guid: 75cf5b3e6615f144d9e48da68d9ca068, type: 3}
   beep: {fileID: 8300000, guid: 29a7fdb9861ccae4a81b934e13780d3a, type: 3}
   left: 3
   right: 3
