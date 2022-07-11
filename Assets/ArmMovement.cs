@@ -71,19 +71,29 @@ public class ArmMovement : MonoBehaviour
         {
             gameObject.GetComponent<ArmMovement>().enabled = true;
         }
-/*
-        //Making it really sequential
-        if(ButtonHandler.sequential == 0 && gameObject.tag == "EnL" && EnemyRight.GetComponent<AudioSource>().isPlaying)
+        if(gameObject.tag == "EnL" && EnemyRight.GetComponent<AudioSource>().isPlaying)
         {
             audio.Stop();
-            
+
         }
-        else if(ButtonHandler.sequential == 0 && gameObject.tag == "EnR" && EnemyLeft.GetComponent<AudioSource>().isPlaying )
+        else if (gameObject.tag == "EnR" && EnemyLeft.GetComponent<AudioSource>().isPlaying)
         {
             audio.Stop();
-            
         }
-*/
+
+        /*
+                //Making it really sequential
+                if(ButtonHandler.sequential == 0 && gameObject.tag == "EnL" && EnemyRight.GetComponent<AudioSource>().isPlaying)
+                {
+                    audio.Stop();
+
+                }
+                else if(ButtonHandler.sequential == 0 && gameObject.tag == "EnR" && EnemyLeft.GetComponent<AudioSource>().isPlaying )
+                {
+                    audio.Stop();
+
+                }
+        */
         //Sound Properties
         if (ButtonHandler.Sound == 0)
         {
@@ -1345,7 +1355,7 @@ public class ArmMovement : MonoBehaviour
         if (EnemyRight.GetComponent<ArmMovement>().right == 0)
         {
             yield return new WaitForSeconds(1f);
-            EnemyRight.GetComponent<AudioSource>().PlayOneShot(UpFR);
+            EnemyRight.GetComponent<AudioSource>().PlayOneShot(UpFL);
         }
         else if (EnemyRight.GetComponent<ArmMovement>().right == 1)
         {
@@ -1360,7 +1370,7 @@ public class ArmMovement : MonoBehaviour
         else if (EnemyRight.GetComponent<ArmMovement>().right == 3)
         {
             yield return new WaitForSeconds(1f);
-            EnemyRight.GetComponent<AudioSource>().PlayOneShot(DownFR);
+            EnemyRight.GetComponent<AudioSource>().PlayOneShot(DownFL);
         }
         
     }
@@ -1374,7 +1384,7 @@ public class ArmMovement : MonoBehaviour
             if (EnemyLeft.GetComponent<ArmMovement>().left == 0)
             {
                 yield return new WaitForSeconds(1f);
-                EnemyLeft.GetComponent<AudioSource>().PlayOneShot(UpFL);
+                EnemyLeft.GetComponent<AudioSource>().PlayOneShot(UpFR);
             }
             else if (EnemyLeft.GetComponent<ArmMovement>().left == 1)
             {
@@ -1389,7 +1399,7 @@ public class ArmMovement : MonoBehaviour
             else if (EnemyLeft.GetComponent<ArmMovement>().left == 3)
             {
                 yield return new WaitForSeconds(1f);
-                EnemyLeft.GetComponent<AudioSource>().PlayOneShot(DownFL);
+                EnemyLeft.GetComponent<AudioSource>().PlayOneShot(DownFR);
             }
             
         }
