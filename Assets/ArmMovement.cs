@@ -68,7 +68,7 @@ public class ArmMovement : MonoBehaviour
     {
         if (gameObject.tag == "EnR")
         {
-            variavel = UniqueRandomInt(0, 2);
+            variavel = Random.Range(0, 2);
             Debug.Log("uRI: " + variavel);
         }
         //Adding cardinality options
@@ -520,7 +520,7 @@ public class ArmMovement : MonoBehaviour
                 if(impactL != AMHitL)
                 {
                     ResetPos();
-                    right = UniqueRandomInt(0, 3);
+                    right = Random.Range(0, 3);
                     Debug.Log("right: " + right);
                     
                     
@@ -555,7 +555,7 @@ public class ArmMovement : MonoBehaviour
                 else if(impactR != AMHitR)
                 {
                     ResetPos();
-                    right = UniqueRandomInt(0, 3);
+                    right = Random.Range(0, 3);
                     Debug.Log("right: " + right);
                     
                     
@@ -629,7 +629,7 @@ public class ArmMovement : MonoBehaviour
                 else if(impactL != AMHitL)
                 {
                     ResetPos();
-                    left = UniqueRandomInt(0, 3);
+                    left = Random.Range(0, 3);
                     Debug.Log("left: " + left);
 
                     if (left == 0 && transform.tag == "EnL")
@@ -669,12 +669,12 @@ public class ArmMovement : MonoBehaviour
                 ResetPos();
                 if (transform.tag == "EnR")
                 {
-                    right = UniqueRandomInt(0, 3);
+                    right = Random.Range(0, 3);
                     Debug.Log("right: " + right);
                 }
                 else if (transform.tag == "EnL")
                 {
-                    left = UniqueRandomInt(0, 3);
+                    left = Random.Range(0, 3);
                     Debug.Log("left: " + left);
                 }
 
@@ -739,12 +739,12 @@ public class ArmMovement : MonoBehaviour
                 ResetPos();
                 if (transform.tag == "EnR")
                 {
-                    right = UniqueRandomInt(0, 3);
+                    right = Random.Range(0, 3);
                     Debug.Log("right: " + right);
                 }
                 else if (transform.tag == "EnL")
                 {
-                    left = UniqueRandomInt(0, 3);
+                    left = Random.Range(0, 3);
                     Debug.Log("left: " + left);
                 }
 
