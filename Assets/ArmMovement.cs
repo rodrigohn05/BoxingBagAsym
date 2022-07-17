@@ -66,11 +66,7 @@ public class ArmMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.tag == "EnR")
-        {
-            variavel = Random.Range(0, 2);
-            Debug.Log("uRI: " + variavel);
-        }
+        
         //Adding cardinality options
         if (ButtonHandler.cardinality == 1)
         {

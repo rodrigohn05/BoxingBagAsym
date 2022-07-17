@@ -36,7 +36,7 @@ public class GlovesHit : MonoBehaviour
         Text mytxt = txt.GetComponent<Text>();
         mytxt.text = "No Hit";
 
-        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0 || ButtonHandler.BagReset == 1)
+        if (OVRInput.GetDown(OVRInput.Button.Four) || ButtonHandler.BagReset == 1)
         {
             Debug.Log("trigger: " + OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger));
             

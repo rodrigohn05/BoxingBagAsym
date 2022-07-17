@@ -54,7 +54,7 @@ public class ButtonHandler : VariableDump
     public static string checkTxt = "On";
     public static string checkATxt = "On";
 
-    public static string BagFTxt = "In Front";
+    public static string BagFTxt = "Free";
 
     public static string SoundTxt = "Spatial";
 

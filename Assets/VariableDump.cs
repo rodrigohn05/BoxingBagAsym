@@ -8,7 +8,7 @@ public class VariableDump : MonoBehaviour
     public int check1 = 0;
     public int checkA1 = 0;
 
-    public int bagF1 = 1;
+    public int bagF1 = 0;
 
     public float slider1 = 1;
     public float slider21 = 1;
